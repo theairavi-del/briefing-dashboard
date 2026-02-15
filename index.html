@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vector Briefings | 9 AM Daily Intelligence</title>
+    <title>ENTREPRENEURIAL HUB | VECTOR INTEL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #111111;
-            --bg-tertiary: #1a1a1a;
+            --bg-primary: #050505;
+            --bg-secondary: #0f0f0f;
+            --bg-tertiary: #161616;
             --accent: #2DD512;
-            --accent-dim: rgba(45, 213, 18, 0.1);
+            --accent-dim: rgba(45, 213, 18, 0.08);
             --text-primary: #ffffff;
             --text-secondary: #a0a0a0;
-            --text-tertiary: #666666;
-            --border: #222222;
-            --glow: rgba(45, 213, 18, 0.3);
+            --text-tertiary: #444444;
+            --border: #1f1f1f;
+            --glow: rgba(45, 213, 18, 0.2);
         }
 
         * {
@@ -30,13 +30,14 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.5;
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* Header */
         .header {
-            background: var(--bg-secondary);
+            background: var(--bg-primary);
             border-bottom: 1px solid var(--border);
             padding: 0 40px;
             position: sticky;
@@ -51,59 +52,55 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
+            height: 80px;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
         }
 
-        .brand-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--accent), #25B50F);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
+        .brand-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 4px 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
         }
 
         .brand-text h1 {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .nav-stat-value {
             font-size: 20px;
             font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .brand-text span {
-            font-size: 12px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .header-stats {
-            display: flex;
-            gap: 30px;
-        }
-
-        .stat {
-            text-align: right;
-        }
-
-        .stat-value {
-            font-size: 24px;
-            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
             color: var(--accent);
         }
 
-        .stat-label {
-            font-size: 11px;
+        .nav-stat-label {
+            font-size: 10px;
             color: var(--text-tertiary);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         /* Main Layout */
@@ -112,353 +109,252 @@
             margin: 0 auto;
             padding: 40px;
             display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 40px;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
         }
 
         /* Sidebar */
         .sidebar {
             position: sticky;
-            top: 110px;
+            top: 120px;
             height: fit-content;
         }
 
-        .search-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .search-container {
+            margin-bottom: 40px;
         }
 
-        .search-box input {
-            background: transparent;
-            border: none;
+        .search-container input {
+            width: 100%;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 14px 20px;
+            border-radius: 4px;
             color: var(--text-primary);
             font-size: 14px;
-            width: 100%;
             outline: none;
+            transition: border-color 0.2s;
         }
 
-        .search-box input::placeholder {
-            color: var(--text-tertiary);
+        .search-container input:focus {
+            border-color: var(--accent);
         }
 
-        .filter-section {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 20px;
+        .nav-group {
+            margin-bottom: 40px;
         }
 
-        .filter-section h3 {
-            font-size: 12px;
+        .nav-group h3 {
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: var(--text-tertiary);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
 
-        .filter-option {
+        .nav-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 0;
+            padding: 12px 0;
             cursor: pointer;
-            border-bottom: 1px solid var(--border);
-            transition: color 0.2s;
-        }
-
-        .filter-option:last-child {
-            border-bottom: none;
-        }
-
-        .filter-option:hover {
-            color: var(--accent);
-        }
-
-        .filter-option.active {
-            color: var(--accent);
-        }
-
-        .filter-count {
-            background: var(--bg-tertiary);
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 11px;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
             transition: all 0.2s;
         }
 
-        .tag:hover {
-            border-color: var(--accent);
+        .nav-item:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-item.active {
             color: var(--accent);
+            border-bottom-color: var(--accent-dim);
         }
 
-        .tag.active {
-            background: var(--accent-dim);
-            border-color: var(--accent);
-            color: var(--accent);
+        .nav-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            opacity: 0.5;
         }
 
-        /* Main Content */
-        .main-content {
-            min-height: 100vh;
+        /* Content Area */
+        .content-header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
         }
 
-        .section-header {
-            margin-bottom: 30px;
+        .content-header h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
 
-        .section-header h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .section-header p {
+        .content-header p {
             color: var(--text-secondary);
-            font-size: 16px;
+            font-size: 15px;
         }
 
-        /* Briefing Cards */
-        .briefing-list {
+        /* Intelligence Feed */
+        .intel-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
         }
 
-        .briefing-card {
+        .intel-card {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            padding: 30px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
         }
 
-        .briefing-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 0 30px var(--glow);
-            transform: translateY(-2px);
-        }
-
-        .briefing-card.expanded {
-            border-color: var(--accent);
-        }
-
-        .briefing-header {
-            padding: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .briefing-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 12px;
-        }
-
-        .date-badge {
-            background: var(--accent-dim);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .category-badge {
+        .intel-card:hover {
+            border-color: #333;
             background: var(--bg-tertiary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            color: var(--text-secondary);
         }
 
-        .briefing-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 8px;
+        .intel-card.expanded {
+            border-color: var(--accent);
+        }
+
+        .intel-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-date {
+            color: var(--accent);
+        }
+
+        .meta-category {
+            color: var(--text-tertiary);
+        }
+
+        .intel-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
             line-height: 1.3;
         }
 
-        .briefing-preview {
+        .intel-preview {
             color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 15px;
+            max-width: 800px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        .briefing-actions {
-            display: flex;
-            gap: 10px;
+        .intel-card.expanded .intel-preview {
+            display: none;
         }
 
-        .action-btn {
-            width: 40px;
-            height: 40px;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 16px;
-        }
-
-        .action-btn:hover {
-            border-color: var(--accent);
-            background: var(--accent-dim);
-        }
-
-        .briefing-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-        }
-
-        .briefing-card.expanded .briefing-content {
-            max-height: 2000px;
-        }
-
-        .briefing-body {
-            padding: 0 25px 25px;
+        .intel-full-content {
+            display: none;
+            margin-top: 30px;
+            padding-top: 30px;
             border-top: 1px solid var(--border);
-            margin-top: 0;
-            padding-top: 25px;
         }
 
-        .briefing-body h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin: 25px 0 12px;
+        .intel-card.expanded .intel-full-content {
+            display: block;
+        }
+
+        /* Content Styling */
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .content-section h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: var(--accent);
+            margin-bottom: 15px;
         }
 
-        .briefing-body h3:first-child {
-            margin-top: 0;
-        }
-
-        .briefing-body p {
+        .content-section p {
             color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 15px;
         }
 
-        .briefing-body ul {
-            margin: 16px 0;
+        .content-section ul {
             padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content-section li {
             color: var(--text-secondary);
-        }
-
-        .briefing-body li {
             margin-bottom: 8px;
-            line-height: 1.6;
+            font-size: 15px;
         }
 
-        .briefing-body strong {
+        .content-section strong {
             color: var(--text-primary);
         }
 
-        .insight-box {
-            background: var(--accent-dim);
-            border-left: 3px solid var(--accent);
-            padding: 20px;
-            border-radius: 0 12px 12px 0;
+        .data-point {
+            background: var(--bg-primary);
+            border-left: 2px solid var(--accent);
+            padding: 15px 20px;
             margin: 20px 0;
+            border-radius: 0 4px 4px 0;
         }
 
-        .insight-box h4 {
-            color: var(--accent);
-            font-size: 13px;
+        .data-point-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .data-point-value {
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        /* Tags */
+        .tag-list {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .tag {
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        /* Priority Indicators */
-        .priority {
-            width: 4px;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .priority-high {
-            background: #ff4757;
-        }
-
-        .priority-medium {
-            background: #ffa502;
-        }
-
-        .priority-low {
-            background: var(--accent);
-        }
-
-        /* Empty State */
-        .empty-state {
-            text-align: center;
-            padding: 80px 40px;
-        }
-
-        .empty-state-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-            opacity: 0.5;
-        }
-
-        .empty-state h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .empty-state p {
-            color: var(--text-secondary);
+            color: var(--text-tertiary);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 2px;
         }
 
         /* Responsive */
         @media (max-width: 1024px) {
             .container {
                 grid-template-columns: 1fr;
-                padding: 20px;
             }
-
             .sidebar {
                 position: static;
-            }
-
-            .header-stats {
-                display: none;
             }
         }
     </style>
@@ -467,24 +363,19 @@
     <header class="header">
         <div class="header-content">
             <div class="brand">
-                <div class="brand-icon">🎯</div>
+                <div class="brand-logo">V.01</div>
                 <div class="brand-text">
-                    <h1>Vector Briefings</h1>
-                    <span>9 AM Daily Intelligence</span>
+                    <h1>Entrepreneur Hub</h1>
                 </div>
             </div>
-            <div class="header-stats">
-                <div class="stat">
-                    <div class="stat-value" id="totalBriefings">0</div>
-                    <div class="stat-label">Briefings</div>
+            <div class="header-nav">
+                <div class="nav-stat">
+                    <span class="nav-stat-value" id="totalCount">0</span>
+                    <span class="nav-stat-label">Total Reports</span>
                 </div>
-                <div class="stat">
-                    <div class="stat-value" id="totalInsights">0</div>
-                    <div class="stat-label">Insights</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value" id="thisWeek">0</div>
-                    <div class="stat-label">This Week</div>
+                <div class="nav-stat">
+                    <span class="nav-stat-value" id="activeIdeas">0</span>
+                    <span class="nav-stat-label">Active Ideas</span>
                 </div>
             </div>
         </div>
@@ -492,381 +383,253 @@
 
     <div class="container">
         <aside class="sidebar">
-            <div class="search-box">
-                <span>🔍</span>
-                <input type="text" id="searchInput" placeholder="Search briefings...">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search knowledge base...">
             </div>
 
-            <div class="filter-section">
-                <h3>Categories</h3>
-                <div class="filter-option active" data-filter="all">
-                    <span>All Briefings</span>
-                    <span class="filter-count" id="count-all">0</span>
+            <nav class="nav-group">
+                <h3>Intelligence Feed</h3>
+                <div class="nav-item active" data-filter="all">
+                    <span>All Reports</span>
+                    <span class="nav-count" id="count-all">0</span>
                 </div>
-                <div class="filter-option" data-filter="trends">
-                    <span>🎨 Design Trends</span>
-                    <span class="filter-count" id="count-trends">0</span>
+                <div class="nav-item" data-filter="reddit">
+                    <span>Reddit Research</span>
+                    <span class="nav-count" id="count-reddit">0</span>
                 </div>
-                <div class="filter-option" data-filter="business">
-                    <span>💰 Business</span>
-                    <span class="filter-count" id="count-business">0</span>
+                <div class="nav-item" data-filter="ideas">
+                    <span>Validated Ideas</span>
+                    <span class="nav-count" id="count-ideas">0</span>
                 </div>
-                <div class="filter-option" data-filter="tech">
-                    <span>⚡ Technology</span>
-                    <span class="filter-count" id="count-tech">0</span>
+                <div class="nav-item" data-filter="deepdive">
+                    <span>Detailed Research</span>
+                    <span class="nav-count" id="count-deepdive">0</span>
                 </div>
-                <div class="filter-option" data-filter="productivity">
-                    <span>🚀 Productivity</span>
-                    <span class="filter-count" id="count-productivity">0</span>
+                <div class="nav-item" data-filter="briefings">
+                    <span>Daily Briefings</span>
+                    <span class="nav-count" id="count-briefings">0</span>
                 </div>
-            </div>
+            </nav>
 
-            <div class="filter-section">
-                <h3>Popular Tags</h3>
-                <div class="tag-cloud" id="tagCloud">
-                    <span class="tag">AI</span>
-                    <span class="tag">Portfolio</span>
-                    <span class="tag">Web Design</span>
-                    <span class="tag">Automation</span>
-                    <span class="tag">3D</span>
-                    <span class="tag">Branding</span>
+            <nav class="nav-group">
+                <h3>Priority Tags</h3>
+                <div id="tagCloud" class="tag-list" style="flex-wrap: wrap;">
+                    <!-- Tags added here -->
                 </div>
-            </div>
+            </nav>
         </aside>
 
         <main class="main-content">
-            <div class="section-header">
-                <h2>Latest Briefings</h2>
-                <p>Your daily dose of trends, insights, and opportunities</p>
+            <div class="content-header">
+                <h2 id="currentCategoryTitle">All Reports</h2>
+                <p id="currentCategoryDesc">Consolidated entrepreneurial intelligence and strategic research.</p>
             </div>
 
-            <div class="briefing-list" id="briefingList">
-                <!-- Briefings loaded dynamically -->
+            <div class="intel-list" id="intelList">
+                <!-- Content loaded here -->
             </div>
         </main>
     </div>
 
     <script>
-        // Sample briefing data - in production this would come from an API/database
-        const briefings = [
+        const intelData = [
             {
                 id: 1,
                 date: '2026-02-15',
-                category: 'trends',
-                title: 'Organic Brutalism 2.0: The Design Trend Dominating 2026',
-                preview: 'Raw typography, industrial silhouettes, and nature-math textures are taking over. Your #2DD512 green hits the exact mood...',
+                category: 'reddit',
+                title: 'Reddit Pain Point Analysis: Adobe Workflow Gaps',
+                preview: 'Identification of recurring technical frustrations within r/photoshop and r/AdobeIllustrator communities...',
                 content: `
-                    <h3>🎨 Visual Trends</h3>
-                    <p><strong>Organic Brutalism</strong> continues to dominate creative portfolios. The aesthetic blends raw, unpolished edges with organic shapes inspired by Fibonacci patterns and nature.</p>
-                    
-                    <div class="insight-box">
-                        <h4>💡 Key Insight</h4>
-                        <p>Your current portfolio color (#2DD512) is perfectly timed - slime greens and industrial grays are the defining palette of 2026.</p>
+                    <div class="content-section">
+                        <h4>Target Communities</h4>
+                        <p>Analysis covers 14 days of high-engagement posts in r/photoshop (750k members) and r/AdobeIllustrator (400k members).</p>
                     </div>
-
-                    <h3>🎯 Action Items</h3>
-                    <ul>
-                        <li>Lean into the "imperfect" aesthetic - intentional rough edges signal authenticity</li>
-                        <li>Consider adding subtle parallax to Pinterest cards for motion-first appeal</li>
-                        <li>Default to dark mode - 68% of portfolios now lead dark-first</li>
-                    </ul>
-
-                    <h3>📊 Trend Sources</h3>
-                    <p>Data sourced from &Walsh, MSCHF, and Dark Igloo studio aesthetics. The bento box grid layout you're using is trending across award-winning portfolios.</p>
+                    <div class="content-section">
+                        <h4>Primary Frustrations Identified</h4>
+                        <ul>
+                            <li><strong>Smart Object Management</strong>: Users struggle with bulk-updating linked assets across multiple .psd files.</li>
+                            <li><strong>Batch Export Limitations</strong>: Standard actions often fail on complex layer structures.</li>
+                            <li><strong>Variable Font Support</strong>: Inconsistent behavior when using third-party variable fonts in production.</li>
+                        </ul>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Opportunity Score</span>
+                        <span class="data-point-value">8.5/10 - High demand for specialized workflow plugins.</span>
+                    </div>
                 `,
-                tags: ['Design Trends', 'Brutalism', 'Portfolio'],
+                tags: ['Research', 'Adobe', 'Reddit'],
                 priority: 'high'
             },
             {
                 id: 2,
-                date: '2026-02-14',
-                category: 'business',
-                title: 'Portfolio Deployment: Why Cloudflare Pages Wins',
-                preview: 'After analyzing all free deployment platforms, Cloudflare Pages emerges as the clear winner for creative portfolios...',
+                date: '2026-02-15',
+                category: 'ideas',
+                title: 'Concept: Vector-Forge (Automatic 3D Topology)',
+                preview: 'A web-based tool for converting 2D sketches into optimized 3D topology using generative patterns...',
                 content: `
-                    <h3>🥇 Platform Comparison</h3>
-                    <p>Analyzed 5 major deployment platforms for your portfolio needs. <strong>Cloudflare Pages</strong> wins on speed, cost, and features.</p>
-
-                    <h3>📈 Key Findings</h3>
-                    <ul>
-                        <li><strong>GitHub Pages:</strong> 1GB storage limit - too small for your assets</li>
-                        <li><strong>Vercel:</strong> 100GB bandwidth - risky for viral HN traffic</li>
-                        <li><strong>Cloudflare:</strong> Unlimited bandwidth, 300+ edge locations</li>
-                        <li><strong>Netlify:</strong> 300 credits/month - complex billing</li>
-                    </ul>
-
-                    <div class="insight-box">
-                        <h4>🚀 Recommendation</h4>
-                        <p>Migrate ravisauce.com to Cloudflare Pages. Already deployed at ravisauce-portfolio.pages.dev with sub-100ms global load times.</p>
+                    <div class="content-section">
+                        <h4>Value Proposition</h4>
+                        <p>Reduces 3D modeling time by 60% for organic brutalist shapes. Targeted at footwear and furniture designers.</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>Revenue Model</h4>
+                        <ul>
+                            <li><strong>Freemium</strong>: Standard exports free.</li>
+                            <li><strong>Pro</strong>: $19/mo for high-fidelity Fibonacci topology generation.</li>
+                            <li><strong>Enterprise</strong>: Custom licensing for design houses.</li>
+                        </ul>
                     </div>
                 `,
-                tags: ['Deployment', 'Cloudflare', 'Performance'],
-                priority: 'high'
+                tags: ['SaaS', '3D', 'Design'],
+                priority: 'medium'
             },
             {
                 id: 3,
-                date: '2026-02-13',
-                category: 'tech',
-                title: 'Anti-Design Movement: Why Perfect is Out',
-                preview: 'The "perfect" Dribbble aesthetic is being rejected. Raw, human-made designs are what audiences crave now...',
+                date: '2026-02-14',
+                category: 'deepdive',
+                title: 'Deep Dive: The Economics of Niche Digital Asset Marketplaces',
+                preview: 'Strategic analysis of Etsy and Creative Market for high-ticket design assets like Minecraft architecture packs...',
                 content: `
-                    <h3>🔥 The Anti-Design Revival</h3>
-                    <p>MSCHF and &Walsh pioneered it - now it's mainstream. High contrast, clashing colors as deliberate choices, and rejection of polished perfection.</p>
-
-                    <h3>🎭 Key Characteristics</h3>
-                    <ul>
-                        <li>Raw typography with system fonts</li>
-                        <li>Visible grids and broken layouts</li>
-                        <li>Imperfect compositions that feel "human-made"</li>
-                        <li>Rejection of Dribbble-perfect aesthetics</li>
-                    </ul>
-
-                    <h3>💼 Business Impact</h3>
-                    <p>Brands adopting anti-design report 40% higher engagement. Audiences are tired of corporate-sanitized visuals.</p>
+                    <div class="content-section">
+                        <h4>Market Landscape</h4>
+                        <p>Niche digital assets (Minecraft schematics, Blender ridges) represent a high-margin, low-overhead revenue stream.</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>Strategic Edge</h4>
+                        <p>Focusing on \"Organic Brutalism\" assets creates a unique monopoly in a crowded marketplace.</p>
+                    </div>
                 `,
-                tags: ['Anti-Design', 'Branding', 'Trends'],
-                priority: 'medium'
+                tags: ['Etsy', 'Finance', 'Strategy'],
+                priority: 'high'
             },
             {
                 id: 4,
-                date: '2026-02-12',
-                category: 'productivity',
-                title: 'Motion-First Design: Micro-Interactions Everywhere',
-                preview: 'Every hover, scroll, and click should have purpose. Kinetic typography and scroll-triggered reveals are now expected...',
+                date: '2026-02-14',
+                category: 'briefings',
+                title: 'Daily Briefing: 02.14.2026',
+                preview: 'Strategic updates on portfolio deployment, cache optimization, and studio infiltration tactics...',
                 content: `
-                    <h3>⚡ Motion Standards 2026</h3>
-                    <p>Motion is no longer optional - it's expected. Every interaction should provide feedback and delight.</p>
-
-                    <h3>🎯 Must-Have Animations</h3>
-                    <ul>
-                        <li>Scroll-triggered reveals using GSAP ScrollTrigger</li>
-                        <li>Liquid/distortion effects on image hover (WebGL)</li>
-                        <li>Kinetic typography responding to cursor</li>
-                        <li>Smooth page transitions (View Transitions API)</li>
-                    </ul>
-
-                    <h3>⚠️ Performance Note</h3>
-                    <p>Keep scale transforms between 1.02-1.05 with 200-300ms ease. Heavy WebGL should be behind user preference checks.</p>
-                `,
-                tags: ['Animation', 'UX', 'GSAP'],
-                priority: 'medium'
-            },
-            {
-                id: 5,
-                date: '2026-02-11',
-                category: 'business',
-                title: 'Launch Strategy: Hacker News "Show HN" Playbook',
-                preview: 'The exact formula for hitting the front page of HN with your portfolio. Timing, title, and engagement tactics...',
-                content: `
-                    <h3>⏰ Timing is Everything</h3>
-                    <p>Post Tuesday-Thursday, 7-10 AM PST. First 30 minutes determines fate - you must reply to EVERY comment immediately.</p>
-
-                    <h3>📝 Title Formulas That Work</h3>
-                    <ul>
-                        <li>"Show HN: I built a Pinterest clone with vanilla JS"</li>
-                        <li>"Show HN: Organic Brutalist portfolio - built without frameworks"</li>
-                        <li>"Show HN: My design portfolio generated $X in freelance leads"</li>
-                    </ul>
-
-                    <div class="insight-box">
-                        <h4>📊 Expected Traffic</h4>
-                        <p>If you hit the front page: 10K+ visitors in 24 hours. Be ready with Cloudflare caching and a fast CDN.</p>
+                    <div class="content-section">
+                        <h4>Portfolio Status</h4>
+                        <p>Deployment to GitHub Pages complete. Mobile navigation optimized. Caching issues resolved via v3 tag.</p>
                     </div>
-
-                    <h3>🔁 Cross-Post Strategy</h3>
-                    <p>Max 2-3 subreddits. Tailor titles per community. Engage for minimum 2 hours after posting.</p>
+                    <div class="content-section">
+                        <h4>NYC Move Prep</h4>
+                        <ul>
+                            <li>Research completed on &Walsh and MSCHF aesthetics.</li>
+                            <li>Portfolio rebuild reflects organic brutalism DNA.</li>
+                        </ul>
+                    </div>
                 `,
-                tags: ['Marketing', 'Hacker News', 'Launch'],
-                priority: 'high'
+                tags: ['Briefing', 'Operations'],
+                priority: 'medium'
             }
         ];
 
-        // State management
-        let currentFilter = 'all';
+        let currentCategory = 'all';
         let searchQuery = '';
-        let activeTags = [];
 
-        // Initialize
         function init() {
-            renderBriefings();
-            updateStats();
-            updateCounts();
-            setupEventListeners();
+            renderIntel();
+            updateUIStrings();
+            setupListeners();
         }
 
-        // Render briefings
-        function renderBriefings() {
-            const container = document.getElementById('briefingList');
-            const filtered = filterBriefings();
+        function renderIntel() {
+            const container = document.getElementById('intelList');
+            const filtered = intelData.filter(item => {
+                const catMatch = currentCategory === 'all' || item.category === currentCategory;
+                const searchMatch = !searchQuery || 
+                                   item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                   item.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
+                return catMatch && searchMatch;
+            });
 
             if (filtered.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">📭</div>
-                        <h3>No briefings found</h3>
-                        <p>Try adjusting your filters or search query</p>
-                    </div>
-                `;
+                container.innerHTML = '<div style="padding: 100px 0; text-align: center; opacity: 0.5;">No records found matching your criteria.</div>';
                 return;
             }
 
-            container.innerHTML = filtered.map(b => `
-                <article class="briefing-card" data-id="${b.id}" onclick="toggleBriefing(${b.id})">
-                    <div class="briefing-header">
-                        <div>
-                            <div class="briefing-meta">
-                                <span class="date-badge">${formatDate(b.date)}</span>
-                                <span class="category-badge">${getCategoryLabel(b.category)}</span>
-                            </div>
-                            <h3 class="briefing-title">${b.title}</h3>
-                            <p class="briefing-preview">${b.preview}</p>
-                        </div>
-                        <div class="briefing-actions">
-                            <button class="action-btn" onclick="event.stopPropagation(); toggleBookmark(${b.id})">🔖</button>
-                            <button class="action-btn" onclick="event.stopPropagation(); shareBriefing(${b.id})">↗️</button>
-                        </div>
+            container.innerHTML = filtered.map(item => `
+                <article class="intel-card" id="card-${item.id}" onclick="toggleExpand(${item.id})">
+                    <div class="intel-meta">
+                        <span class="meta-date">${formatDate(item.date)}</span>
+                        <span class="meta-category">${item.category.replace('_', ' ')}</span>
                     </div>
-                    <div class="briefing-content">
-                        <div class="briefing-body">
-                            ${b.content}
-                            <div style="margin-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
-                                ${b.tags.map(t => `<span class="tag active">${t}</span>`).join('')}
-                            </div>
-                        </div>
+                    <h3 class="intel-title">${item.title}</h3>
+                    <p class="intel-preview">${item.preview}</p>
+                    <div class="intel-full-content">
+                        ${item.content}
+                    </div>
+                    <div class="tag-list">
+                        ${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}
                     </div>
                 </article>
             `).join('');
         }
 
-        // Filter logic
-        function filterBriefings() {
-            return briefings.filter(b => {
-                // Category filter
-                if (currentFilter !== 'all' && b.category !== currentFilter) {
-                    return false;
-                }
-
-                // Search filter
-                if (searchQuery) {
-                    const q = searchQuery.toLowerCase();
-                    const matchTitle = b.title.toLowerCase().includes(q);
-                    const matchPreview = b.preview.toLowerCase().includes(q);
-                    const matchTags = b.tags.some(t => t.toLowerCase().includes(q));
-                    if (!matchTitle && !matchPreview && !matchTags) return false;
-                }
-
-                // Tag filter
-                if (activeTags.length > 0) {
-                    if (!activeTags.every(t => b.tags.includes(t))) return false;
-                }
-
-                return true;
-            });
-        }
-
-        // Toggle briefing expansion
-        function toggleBriefing(id) {
-            const card = document.querySelector(`[data-id="${id}"]`);
-            card.classList.toggle('expanded');
-        }
-
-        // Format date
-        function formatDate(dateStr) {
-            const date = new Date(dateStr);
-            const today = new Date();
-            const diff = Math.floor((today - date) / (1000 * 60 * 60 * 24));
+        function toggleExpand(id) {
+            const card = document.getElementById(`card-${id}`);
+            const isExpanded = card.classList.contains('expanded');
             
-            if (diff === 0) return 'Today';
-            if (diff === 1) return 'Yesterday';
-            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        }
-
-        // Get category label
-        function getCategoryLabel(cat) {
-            const labels = {
-                trends: '🎨 Trends',
-                business: '💰 Business',
-                tech: '⚡ Tech',
-                productivity: '🚀 Productivity'
-            };
-            return labels[cat] || cat;
-        }
-
-        // Update stats
-        function updateStats() {
-            document.getElementById('totalBriefings').textContent = briefings.length;
-            document.getElementById('totalInsights').textContent = briefings.reduce((acc, b) => acc + (b.content.match(/<h3>/g) || []).length, 0);
-            document.getElementById('thisWeek').textContent = briefings.filter(b => {
-                const date = new Date(b.date);
-                const weekAgo = new Date();
-                weekAgo.setDate(weekAgo.getDate() - 7);
-                return date >= weekAgo;
-            }).length;
-        }
-
-        // Update category counts
-        function updateCounts() {
-            document.getElementById('count-all').textContent = briefings.length;
-            ['trends', 'business', 'tech', 'productivity'].forEach(cat => {
-                const count = briefings.filter(b => b.category === cat).length;
-                document.getElementById(`count-${cat}`).textContent = count;
-            });
-        }
-
-        // Setup event listeners
-        function setupEventListeners() {
-            // Filter clicks
-            document.querySelectorAll('.filter-option').forEach(opt => {
-                opt.addEventListener('click', () => {
-                    document.querySelectorAll('.filter-option').forEach(o => o.classList.remove('active'));
-                    opt.classList.add('active');
-                    currentFilter = opt.dataset.filter;
-                    renderBriefings();
-                });
-            });
-
-            // Search input
-            document.getElementById('searchInput').addEventListener('input', (e) => {
-                searchQuery = e.target.value;
-                renderBriefings();
-            });
-
-            // Tag clicks
-            document.querySelectorAll('.tag').forEach(tag => {
-                tag.addEventListener('click', () => {
-                    tag.classList.toggle('active');
-                    const tagName = tag.textContent;
-                    if (activeTags.includes(tagName)) {
-                        activeTags = activeTags.filter(t => t !== tagName);
-                    } else {
-                        activeTags.push(tagName);
-                    }
-                    renderBriefings();
-                });
-            });
-        }
-
-        // Bookmark toggle
-        function toggleBookmark(id) {
-            console.log('Bookmark:', id);
-        }
-
-        // Share briefing
-        function shareBriefing(id) {
-            const b = briefings.find(x => x.id === id);
-            if (navigator.share) {
-                navigator.share({
-                    title: b.title,
-                    text: b.preview,
-                    url: window.location.href
-                });
+            // Close others if you want accordion behavior
+            // document.querySelectorAll('.intel-card').forEach(c => c.classList.remove('expanded'));
+            
+            if (!isExpanded) {
+                card.classList.add('expanded');
             } else {
-                navigator.clipboard.writeText(`${b.title}\n\n${b.preview}`);
-                alert('Copied to clipboard!');
+                card.classList.remove('expanded');
             }
         }
 
-        // Initialize on load
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+        }
+
+        function updateUIStrings() {
+            const total = intelData.length;
+            const ideas = intelData.filter(i => i.category === 'ideas').length;
+            
+            document.getElementById('totalCount').textContent = total;
+            document.getElementById('activeIdeas').textContent = ideas;
+            
+            document.getElementById('count-all').textContent = total;
+            document.getElementById('count-reddit').textContent = intelData.filter(i => i.category === 'reddit').length;
+            document.getElementById('count-ideas').textContent = ideas;
+            document.getElementById('count-deepdive').textContent = intelData.filter(i => i.category === 'deepdive').length;
+            document.getElementById('count-briefings').textContent = intelData.filter(i => i.category === 'briefings').length;
+
+            // Generate Tags
+            const allTags = [...new Set(intelData.flatMap(i => i.tags))];
+            document.getElementById('tagCloud').innerHTML = allTags.map(t => `<span class="tag">${t}</span>`).join('');
+        }
+
+        function setupListeners() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    currentCategory = item.dataset.filter;
+                    
+                    const titles = {
+                        all: 'All Reports',
+                        reddit: 'Reddit Research',
+                        ideas: 'Validated Ideas',
+                        deepdive: 'Detailed Research',
+                        briefings: 'Daily Briefings'
+                    };
+                    document.getElementById('currentCategoryTitle').textContent = titles[currentCategory];
+                    renderIntel();
+                });
+            });
+
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                renderIntel();
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
