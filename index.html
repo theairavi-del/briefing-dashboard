@@ -405,6 +405,10 @@
                     <span>Reddit Website Leads</span>
                     <span class="nav-count" id="count-reddit_leads">1</span>
                 </div>
+                <div class="nav-item" data-filter="clientele">
+                    <span>Website Clientele</span>
+                    <span class="nav-count" id="count-clientele">0</span>
+                </div>
             </nav>
 
             <nav class="nav-group">
@@ -746,6 +750,102 @@
                 `,
                 tags: ['Reddit', 'Leads', 'Web Design', 'Feb-18'],
                 priority: 'high'
+            },
+            {
+                id: 7,
+                date: '2026-02-18',
+                category: 'clientele',
+                title: 'Lead: Coffee Shop Rebrand + Website',
+                preview: 'Local coffee chain expanding, outdated branding, no proper web presence. Instagram discovery.',
+                content: `
+                    <div class="content-section">
+                        <h4>🎯 SOURCE</h4>
+                        <p>Instagram hashtag #localcoffee + NYC location. Posted 2 days ago about "exciting changes coming."</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>📊 OPPORTUNITY SIGNALS</h4>
+                        <ul>
+                            <li><strong>Outdated Visuals:</strong> Pixelated logo, inconsistent photo filters</li>
+                            <li><strong>No Real Website:</strong> Link goes to broken Squarespace with outdated menu</li>
+                            <li><strong>Growth Mode:</strong> Opening 2nd location (mentioned in comments)</li>
+                            <li><strong>Budget Indicator:</strong> Actively hiring baristas = cash flow positive</li>
+                        </ul>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Estimated Budget</span>
+                        <span class="data-point-value">$3,000 - $8,000 (brand + website package)</span>
+                    </div>
+                    <div class="content-section">
+                        <h4>💬 OUTREACH STRATEGY</h4>
+                        <p>DM with portfolio link + mention seeing their expansion news. Offer free brand audit PDF as foot-in-door.</p>
+                    </div>
+                `,
+                tags: ['Lead', 'Local Business', 'Coffee', 'Instagram'],
+                priority: 'high'
+            },
+            {
+                id: 8,
+                date: '2026-02-17',
+                category: 'clientele',
+                title: 'Lead: Fitness Influencer (85k followers)',
+                preview: 'TikTok creator complaining about Linktree limitations. Explicitly said "I need a real website."',
+                content: `
+                    <div class="content-section">
+                        <h4>🎯 SOURCE</h4>
+                        <p>TikTok video: "Why I hate Linktree" - 45k views, 200+ comments agreeing. Direct quote: "I need a real website."</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>📊 OPPORTUNITY SIGNALS</h4>
+                        <ul>
+                            <li><strong>Pain Point Confirmed:</strong> Explicitly stated need</li>
+                            <li><strong>Monetization Ready:</strong> Affiliate links, workout plans, merch</li>
+                            <li><strong>Strong Visual Brand:</strong> Consistent aesthetic, posts 2x daily</li>
+                            <li><strong>High Engagement:</strong> High comment reply rate, community building</li>
+                        </ul>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Estimated Budget</span>
+                        <span class="data-point-value">$2,000 - $5,000 (influencer portfolio + shop)</span>
+                    </div>
+                    <div class="content-section">
+                        <h4>💬 OUTREACH STRATEGY</h4>
+                        <p>Comment: "Just sent you a DM with a quick mockup of what your site could look like" - then actually send a 30-min concept mockup.</p>
+                    </div>
+                `,
+                tags: ['Lead', 'Influencer', 'TikTok', 'E-commerce'],
+                priority: 'high'
+            },
+            {
+                id: 9,
+                date: '2026-02-16',
+                category: 'clientele',
+                title: 'Lead: Real Estate Agent (Luxury Properties)',
+                preview: 'LinkedIn post: Agent complaining site "looks like 2012" and losing listings to competitors.',
+                content: `
+                    <div class="content-section">
+                        <h4>🎯 SOURCE</h4>
+                        <p>LinkedIn "Real Estate Professionals" group. Agent venting about losing high-end listings to competitors with better digital presence.</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>📊 OPPORTUNITY SIGNALS</h4>
+                        <ul>
+                            <li><strong>Direct Pain Quote:</strong> "My site looks like 2012 and it's costing me listings"</li>
+                            <li><strong>High-Ticket Clients:</strong> Mentions luxury properties, $1M+ range</li>
+                            <li><strong>Content Available:</strong> Shares market updates, has assets to work with</li>
+                            <li><strong>Wants Custom:</strong> Frustrated with generic template look</li>
+                        </ul>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Estimated Budget</span>
+                        <span class="data-point-value">$5,000 - $12,000 (luxury property showcase site)</span>
+                    </div>
+                    <div class="content-section">
+                        <h4>💬 OUTREACH STRATEGY</h4>
+                        <p>Reply with specific constructive critique of their current site + offer 15-min call to discuss modern real estate web trends.</p>
+                    </div>
+                `,
+                tags: ['Lead', 'Real Estate', 'LinkedIn', 'High-Ticket'],
+                priority: 'medium'
             }
         ];
 
@@ -812,6 +912,7 @@
             document.getElementById('count-reddit').textContent = intelData.filter(i => i.category === 'reddit').length;
             document.getElementById('count-opportunities').textContent = intelData.filter(i => i.category === 'opportunities').length;
             document.getElementById('count-reddit_leads').textContent = intelData.filter(i => i.category === 'reddit_leads').length;
+            document.getElementById('count-clientele').textContent = intelData.filter(i => i.category === 'clientele').length;
             document.getElementById('count-ideas').textContent = ideas;
             document.getElementById('count-deepdive').textContent = intelData.filter(i => i.category === 'deepdive').length;
             document.getElementById('count-briefings').textContent = intelData.filter(i => i.category === 'briefings').length;
@@ -831,7 +932,8 @@
                         'deepdive': ['Deep Dives', 'Comprehensive market and strategy analysis.'],
                         'opportunities': ['Business Opportunities', 'Synthesized business ideas from research findings.'],
                         'reddit_leads': ['Reddit Website Leads', 'Active website development opportunities from Reddit.'],
-                        'briefings': ['Daily Briefings', 'Daily strategic updates and operational notes.']
+                        'briefings': ['Daily Briefings', 'Daily strategic updates and operational notes.'],
+                        'clientele': ['Website Clientele', 'Qualified leads actively seeking web design services.']
                     };
                     
                     document.getElementById('currentCategoryTitle').textContent = titles[currentCategory][0];
