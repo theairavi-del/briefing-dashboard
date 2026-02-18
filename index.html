@@ -343,6 +343,8 @@
             font-weight: 600;
             color: var(--text-primary);
         }
+
+        .priority-high { border-left: 3px solid var(--accent); }
     </style>
 </head>
 <body>
@@ -356,11 +358,11 @@
             </div>
             <nav class="header-nav">
                 <div class="nav-stat">
-                    <span class="nav-stat-value" id="totalCount">8</span>
+                    <span class="nav-stat-value" id="totalCount">5</span>
                     <span class="nav-stat-label">Total Reports</span>
                 </div>
                 <div class="nav-stat">
-                    <span class="nav-stat-value" id="activeIdeas">3</span>
+                    <span class="nav-stat-value" id="activeIdeas">2</span>
                     <span class="nav-stat-label">Active Ideas</span>
                 </div>
             </nav>
@@ -377,19 +379,19 @@
                 <h3>Categories</h3>
                 <div class="nav-item active" data-filter="all">
                     <span>All Reports</span>
-                    <span class="nav-count" id="count-all">8</span>
+                    <span class="nav-count" id="count-all">5</span>
                 </div>
                 <div class="nav-item" data-filter="reddit">
                     <span>Reddit Research</span>
-                    <span class="nav-count" id="count-reddit">2</span>
+                    <span class="nav-count" id="count-reddit">1</span>
                 </div>
                 <div class="nav-item" data-filter="ideas">
                     <span>Validated Ideas</span>
-                    <span class="nav-count" id="count-ideas">3</span>
+                    <span class="nav-count" id="count-ideas">2</span>
                 </div>
                 <div class="nav-item" data-filter="deepdive">
-                    <span>Detailed Research</span>
-                    <span class="nav-count" id="count-deepdive">2</span>
+                    <span>Deep Dives</span>
+                    <span class="nav-count" id="count-deepdive">1</span>
                 </div>
                 <div class="nav-item" data-filter="briefings">
                     <span>Daily Briefings</span>
@@ -403,8 +405,8 @@
                     <span class="tag">SaaS</span>
                     <span class="tag">AI</span>
                     <span class="tag">Research</span>
-                    <span class="tag">Trends</span>
                     <span class="tag">Deployed</span>
+                    <span class="tag">Pain Points</span>
                 </div>
             </nav>
         </aside>
@@ -425,205 +427,239 @@
                 id: 1,
                 date: '2026-02-18',
                 category: 'briefings',
-                title: 'Daily Briefing: 02.18.2026',
-                preview: 'Design trends, 1-star review opportunities, and the "Vibe Code Rescue" market...',
+                title: 'Daily Briefing: Feb 18, 2026 (9:31 AM EST)',
+                preview: 'Design trends, 1-star review opportunities, YouTube SEO, and AI ROI crisis...',
                 content: `
                     <div class="content-section">
-                        <h4>Design Trends</h4>
+                        <h4>🎨 DESIGN TRENDS (What's Hot / What's Coming)</h4>
                         <ul>
-                            <li><strong>Liquid Metal & Chrome Type</strong> - 2000s Y2K refined. Iridescent gradients, silver typography.</li>
-                            <li><strong>Anti-Design Organized Chaos</strong> - Intentionally broken grids, curated chaos like MSCHF.</li>
-                            <li><strong>Bio-Organic Interfaces</strong> - Living UI elements, pulsing borders, cellular textures.</li>
+                            <li><strong>Liquid Metal & Chrome Type</strong> - 2000s Y2K refined. Iridescent gradients, silver/chrome typography, floating 3D letterforms. Brands: Nike, Apple Vision Pro, Spotify Wrapped 2024. <em>Your angle: Apply Fibonacci ridges to chrome surfaces—organic brutalism meets cyber-luxe.</em></li>
+                            <li><strong>"Anti-Design" Organized Chaos</strong> - Intentionally broken grids, clashing fonts, raw textures. Not messy—curated chaos like MSCHF but elevated. <em>Your angle: Artifact Recovery Agency aesthetic fits this perfectly.</em></li>
+                            <li><strong>AI-Generated → AI-Refined</strong> - Shift from "AI made this" to "AI started this, human perfected it." Transparency is the new flex. <em>Your angle: VECTRA-FORGE as the bridge—sketch-to-3D with human curation.</em></li>
                         </ul>
                     </div>
                     <div class="content-section">
-                        <h4>Top 1-Star Review Pain Points</h4>
+                        <h4>🔴 TOP 1-STAR REVIEW PAIN POINTS</h4>
+                        <table style="width:100%; color: var(--text-secondary); font-size: 14px; margin: 10px 0;">
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 8px 0;"><strong>Subscription Cancellation Hell</strong></td>
+                                <td style="padding: 8px 0; color: var(--accent);">Pain Score: 9.4</td>
+                                <td style="padding: 8px 0;">Adobe, gyms, meal kits</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 8px 0;"><strong>Airline Customer Service</strong></td>
+                                <td style="padding: 8px 0; color: var(--accent);">Pain Score: 9.1</td>
+                                <td style="padding: 8px 0;">Hours on hold, no rebooking</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 8px 0;"><strong>Telecom Billing</strong></td>
+                                <td style="padding: 8px 0; color: var(--accent);">Pain Score: 8.9</td>
+                                <td style="padding: 8px 0;">Promo rates expire silently</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 8px 0;"><strong>Landlord Deposit Theft</strong></td>
+                                <td style="padding: 8px 0; color: var(--accent);">Pain Score: 8.9</td>
+                                <td style="padding: 8px 0;">Illegal withholdings</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 8px 0;"><strong>Car Repair Price Opacity</strong></td>
+                                <td style="padding: 8px 0; color: var(--accent);">Pain Score: 8.7</td>
+                                <td style="padding: 8px 0;">$2,800 quote vs $600 second opinion</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="content-section">
+                        <h4>💡 KEY OPPORTUNITIES</h4>
                         <ul>
-                            <li><strong>Subscription Cancellation Hell</strong> (Pain Score: 9.4) - Adobe, gyms, meal kits</li>
-                            <li><strong>Airline Customer Service</strong> (Pain Score: 9.1) - Hours on hold, no rebooking</li>
-                            <li><strong>Telecom Billing</strong> (Pain Score: 8.9) - Promo rates expire silently</li>
-                            <li><strong>Landlord Deposit Theft</strong> (Pain Score: 8.9) - Illegal withholdings</li>
+                            <li><strong>Cancellation-as-a-Service</strong> - Browser extension + AI phone agent that auto-cancels subscriptions. <strong>Revenue:</strong> $5/mo or $29/cancel.</li>
+                            <li><strong>Vibe Code Rescue</strong> - $50/incident debugging for AI-generated code. Market: Non-coders hitting walls with Claude/ChatGPT code.</li>
+                            <li><strong>YouTube SEO Tool for B2B SaaS</strong> - Proven: 100-200 view videos generating $12K/mo. 63% views from search. Target low-competition tutorial keywords.</li>
+                            <li><strong>AI ROI Dashboard</strong> - CEOs admitting AI has "zero impact on productivity." 524 HN upvotes. Tool integrates with Slack/GitHub to measure actual gains.</li>
                         </ul>
                     </div>
                     <div class="content-section">
-                        <h4>Key Opportunities</h4>
+                        <h4>🚀 EMERGING TOOLS TO WATCH</h4>
                         <ul>
-                            <li><strong>Cancellation-as-a-Service</strong> - Browser extension + AI phone agent. $5/mo or $29/cancel.</li>
-                            <li><strong>Vibe Code Rescue</strong> - $50/incident debugging for AI-generated code.</li>
-                            <li><strong>YouTube SEO Tool for B2B SaaS</strong> - 100-view videos generating $12K/mo from search.</li>
+                            <li><strong>Claude Sonnet 4.6</strong> - 1207 HN points, claiming near-dev replacement</li>
+                            <li><strong>BarraCUDA</strong> - Open-source CUDA compiler for AMD GPUs (breaking NVIDIA lock-in)</li>
+                            <li><strong>Breadboard</strong> - "Modern HyperCard" visual web app builder</li>
                         </ul>
                     </div>
                 `,
-                tags: ['Briefing', 'Trends', 'Opportunities'],
+                tags: ['Briefing', 'Trends', 'Opportunities', 'Feb-18'],
                 priority: 'high'
             },
             {
                 id: 2,
                 date: '2026-02-18',
                 category: 'ideas',
-                title: 'SPLITT: Bill Splitting App (DEPLOYED)',
-                preview: 'Built and deployed v18 with OCR receipt scanning, Supabase backend, and real-time collaboration...',
+                title: 'SPLITT: Bill Splitting App (DEPLOYED v21)',
+                preview: 'Built and deployed with OCR receipt scanning, Supabase backend, real-time collaboration, and payment integration...',
                 content: `
                     <div class="content-section">
-                        <h4>Features</h4>
+                        <h4>✅ FEATURES SHIPPED</h4>
                         <ul>
-                            <li><strong>OCR Receipt Scanning</strong> - Tesseract.js extracts items, prices, tax, tip automatically.</li>
-                            <li><strong>Cross-Device Sync</strong> - Supabase backend for real-time room collaboration.</li>
-                            <li><strong>No Accounts Required</strong> - 6-digit room codes, works instantly.</li>
-                            <li><strong>Smart Splitting</strong> - Claim items solo or split, orphan detection, math validation.</li>
+                            <li><strong>OCR Receipt Scanning</strong> - Tesseract.js extracts items, prices, tax, tip automatically from photos</li>
+                            <li><strong>Cross-Device Sync</strong> - Supabase backend for real-time room collaboration</li>
+                            <li><strong>No Accounts Required</strong> - 6-digit room codes, works instantly</li>
+                            <li><strong>Smart Splitting</strong> - Claim items "Solo" or "Split Even", orphan detection</li>
+                            <li><strong>Payment Integration</strong> - Host can add Venmo, Cash App, PayPal, Apple Pay links</li>
+                            <li><strong>Math Validation</strong> - Subtotal + Tax + Tip = Total verification</li>
+                            <li><strong>Smooth PIN Entry</strong> - Backspace navigation, arrow key support</li>
                         </ul>
                     </div>
                     <div class="content-section">
-                        <h4>Live URL</h4>
-                        <p>https://theairavi-del.github.io/splitt-app/</p>
+                        <h4>🔗 LIVE URL</h4>
+                        <p style="font-family: 'JetBrains Mono', monospace; background: var(--bg-tertiary); padding: 12px; border-radius: 4px;">https://theairavi-del.github.io/splitt-app/</p>
                     </div>
                     <div class="data-point">
                         <span class="data-point-label">Status</span>
-                        <span class="data-point-value">v18 LIVE - All bugs fixed, Supabase connected</span>
+                        <span class="data-point-value">v21 LIVE - All bugs fixed, Supabase connected, Payment methods added</span>
+                    </div>
+                    <div class="content-section">
+                        <h4>🐛 BUGS FIXED IN v21</h4>
+                        <ul>
+                            <li>Cross-device sync - all users see selection screen when host starts</li>
+                            <li>PIN input - smooth backspace navigation through all 6 boxes</li>
+                            <li>Added back button - can return to selection from review screen</li>
+                            <li>Payment methods - host can add Venmo/CashApp/PayPal/Apple Pay</li>
+                        </ul>
                     </div>
                 `,
-                tags: ['Product', 'Deployed', 'SaaS'],
+                tags: ['Product', 'Deployed', 'SaaS', 'Feb-18'],
                 priority: 'high'
             },
             {
                 id: 3,
-                date: '2026-02-17',
-                category: 'deepdive',
-                title: 'Deep Dive: AI ROI Dashboard Opportunity',
-                preview: 'CEOs admitting AI has "zero impact on productivity" despite massive spend. 524 upvotes on HN...',
+                date: '2026-02-18',
+                category: 'reddit',
+                title: 'Reddit Intelligence: YouTube as B2B Search Engine',
+                preview: '100-view videos generating $12K/month. 63% from search, 26% from Google. Most founders miss this...',
                 content: `
                     <div class="content-section">
-                        <h4>The Problem</h4>
-                        <p>CEOs admitting AI has "zero impact on productivity" despite massive spend. 524 upvotes, 424 comments on Hacker News.</p>
+                        <h4>📊 THE DATA</h4>
+                        <p>r/SaaS founder case study: 100-200 view videos generating <strong>$12,000/month</strong> through search alone.</p>
+                        <ul>
+                            <li><strong>63%</strong> of views from YouTube search</li>
+                            <li><strong>26%</strong> from Google directly (video results)</li>
+                            <li><strong>Only 11%</strong> from browse/features</li>
+                        </ul>
                     </div>
                     <div class="content-section">
-                        <h4>The Solution</h4>
-                        <p>Tool that integrates with Slack/GitHub/Notion to measure actual AI productivity gains. Real ROI tracking.</p>
+                        <h4>🎯 THE METHOD</h4>
+                        <p>"Harvest customer pain → create tutorials → become search asset"</p>
+                        <ol style="color: var(--text-secondary); padding-left: 20px;">
+                            <li style="padding: 8px 0;">Find questions people ask (Reddit, Stack Overflow, support tickets)</li>
+                            <li style="padding: 8px 0;">Create 5-10 minute tutorial solving ONE specific problem</li>
+                            <li style="padding: 8px 0;">Target low-competition keywords (&lt;1000 monthly searches)</li>
+                            <li style="padding: 8px 0;">Include product demo naturally (not a sales pitch)</li>
+                            <li style="padding: 8px 0;">Link in description to free tool or trial</li>
+                        </ol>
+                    </div>
+                    <div class="content-section">
+                        <h4>💰 OPPORTUNITY</h4>
+                        <p><strong>YouTube SEO Tool for B2B SaaS</strong> - Target low-competition tutorial keywords that indicate buying intent. Most founders focus on high-volume keywords and miss the long-tail goldmine.</p>
+                        <p>Example: "How to sync Notion with GitHub" (120 searches/mo, 0 competition) vs "Notion tutorial" (50K searches, impossible to rank)</p>
                     </div>
                     <div class="data-point">
-                        <span class="data-point-label">Market</span>
-                        <span class="data-point-value">Every company using AI tools with no measurement</span>
+                        <span class="data-point-label">Validation</span>
+                        <span class="data-point-value">Proven by multiple SaaS founders, 100-200 views = $12K MRR</span>
                     </div>
                 `,
-                tags: ['AI', 'SaaS', 'Enterprise'],
+                tags: ['YouTube', 'SEO', 'Content', 'Reddit', 'Feb-18'],
                 priority: 'high'
             },
             {
                 id: 4,
-                date: '2026-02-17',
-                category: 'reddit',
-                title: 'Reddit Analysis: YouTube as Search Engine',
-                preview: 'Proven: 100-200 view videos generating $12K/month. 63% views from search, 26% from Google...',
+                date: '2026-02-18',
+                category: 'deepdive',
+                title: 'Deep Dive: AI ROI Dashboard Crisis',
+                preview: 'CEOs admitting AI has "zero impact on productivity." 524 HN upvotes, 424 comments. Measurement tools desperately needed...',
                 content: `
                     <div class="content-section">
-                        <h4>Key Insight</h4>
-                        <p>r/SaaS founder: 100-200 view videos generating $12K/month through search alone.</p>
-                    </div>
-                    <div class="content-section">
-                        <h4>Method</h4>
+                        <h4>🔴 THE PROBLEM</h4>
+                        <p>Hacker News front page (Feb 18, 2026): CEOs admitting AI has <strong>"zero impact on productivity"</strong> despite massive spend.</p>
                         <ul>
-                            <li>"Harvest customer pain → tutorials → search assets"</li>
-                            <li>63% views from YouTube search</li>
-                            <li>26% from Google directly</li>
+                            <li><strong>524 upvotes</strong>, 424 comments</li>
+                            <li>Widespread problem across industries</li>
+                            <li>No one knows if AI tools actually help</li>
+                            <li>Budgets being cut due to lack of proof</li>
                         </ul>
                     </div>
                     <div class="content-section">
-                        <h4>Opportunity</h4>
-                        <p>YouTube SEO tool for B2B SaaS targeting low-competition tutorial keywords. Most founders miss this entirely.</p>
-                    </div>
-                `,
-                tags: ['YouTube', 'SEO', 'Content'],
-                priority: 'medium'
-            },
-            {
-                id: 5,
-                date: '2026-02-15',
-                category: 'reddit',
-                title: 'Reddit Pain Point Analysis: Adobe Workflow Gaps',
-                preview: 'Identification of recurring technical frustrations within r/photoshop and r/AdobeIllustrator communities...',
-                content: `
-                    <div class="content-section">
-                        <h4>Target Communities</h4>
-                        <p>Analysis covers 14 days of high-engagement posts in r/photoshop (750k members) and r/AdobeIllustrator (400k members).</p>
-                    </div>
-                    <div class="content-section">
-                        <h4>Primary Frustrations Identified</h4>
+                        <h4>💡 THE SOLUTION</h4>
+                        <p><strong>AI ROI Dashboard</strong> - Tool that integrates with:</p>
                         <ul>
-                            <li><strong>Smart Object Management</strong>: Users struggle with bulk-updating linked assets across multiple .psd files.</li>
-                            <li><strong>Batch Export Limitations</strong>: Standard actions often fail on complex layer structures.</li>
-                            <li><strong>Variable Font Support</strong>: Inconsistent behavior when using third-party variable fonts in production.</li>
+                            <li>Slack (measure response times, message volume)</li>
+                            <li>GitHub (commits, PR velocity, bug rates)</li>
+                            <li>Notion/Confluence (doc creation speed)</li>
+                            <li>Cursor/Copilot (acceptance rates, time saved)</li>
+                        </ul>
+                        <p>Shows actual productivity gains (or lack thereof) with before/after metrics.</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>🎯 TARGET MARKET</h4>
+                        <p>Every company using AI tools with no measurement. This is currently <strong>most companies</strong>.</p>
+                        <ul>
+                            <li>CTOs who need to justify AI spend to board</li>
+                            <li>Engineering managers measuring team output</li>
+                            <li>Finance teams auditing software ROI</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h4>💰 REVENUE MODEL</h4>
+                        <ul>
+                            <li><strong>Starter:</strong> $49/mo (up to 10 engineers)</li>
+                            <li><strong>Team:</strong> $199/mo (up to 50 engineers)</li>
+                            <li><strong>Enterprise:</strong> Custom ( SSO, advanced analytics)</li>
                         </ul>
                     </div>
                     <div class="data-point">
-                        <span class="data-point-label">Opportunity Score</span>
-                        <span class="data-point-value">8.5/10 - High demand for specialized workflow plugins.</span>
+                        <span class="data-point-label">Market Size</span>
+                        <span class="data-point-value">Every company with AI tools and no measurement (hundreds of thousands)</span>
                     </div>
                 `,
-                tags: ['Research', 'Adobe', 'Reddit'],
+                tags: ['AI', 'SaaS', 'Enterprise', 'Deep-Dive', 'Feb-18'],
                 priority: 'high'
             },
             {
-                id: 6,
-                date: '2026-02-15',
-                category: 'ideas',
-                title: 'Concept: Vector-Forge (Automatic 3D Topology)',
-                preview: 'A web-based tool for converting 2D sketches into optimized 3D topology using generative patterns...',
-                content: `
-                    <div class="content-section">
-                        <h4>Value Proposition</h4>
-                        <p>Reduces 3D modeling time by 60% for organic brutalist shapes. Targeted at footwear and furniture designers.</p>
-                    </div>
-                    <div class="content-section">
-                        <h4>Revenue Model</h4>
-                        <ul>
-                            <li><strong>Freemium</strong>: Standard exports free.</li>
-                            <li><strong>Pro</strong>: $19/mo for high-fidelity Fibonacci topology generation.</li>
-                            <li><strong>Enterprise</strong>: Custom licensing for design houses.</li>
-                        </ul>
-                    </div>
-                `,
-                tags: ['SaaS', '3D', 'Design'],
-                priority: 'medium'
-            },
-            {
-                id: 7,
-                date: '2026-02-14',
-                category: 'deepdive',
-                title: 'Deep Dive: The Economics of Niche Digital Asset Marketplaces',
-                preview: 'Strategic analysis of Etsy and Creative Market for high-ticket design assets like Minecraft architecture packs...',
-                content: `
-                    <div class="content-section">
-                        <h4>Market Landscape</h4>
-                        <p>Niche digital assets (Minecraft schematics, Blender ridges) represent a high-margin, low-overhead revenue stream.</p>
-                    </div>
-                    <div class="content-section">
-                        <h4>Strategic Edge</h4>
-                        <p>Focusing on "Organic Brutalism" assets creates a unique monopoly in a crowded marketplace.</p>
-                    </div>
-                `,
-                tags: ['Etsy', 'Finance', 'Strategy'],
-                priority: 'high'
-            },
-            {
-                id: 8,
-                date: '2026-02-14',
+                id: 5,
+                date: '2026-02-18',
                 category: 'briefings',
-                title: 'Daily Briefing: 02.14.2026',
-                preview: 'Strategic updates on portfolio deployment, cache optimization, and studio infiltration tactics...',
+                title: 'RAVISAUCE PROJECTS STATUS: Feb 18, 2026',
+                preview: 'Current status of all active projects: SPLITT deployed, portfolio live, research dashboard updated...',
                 content: `
                     <div class="content-section">
-                        <h4>Portfolio Status</h4>
-                        <p>Deployment to GitHub Pages complete. Mobile navigation optimized. Caching issues resolved via v3 tag.</p>
-                    </div>
-                    <div class="content-section">
-                        <h4>NYC Move Prep</h4>
+                        <h4>🚀 DEPLOYED & LIVE</h4>
                         <ul>
-                            <li>Research completed on &Walsh and MSCHF aesthetics.</li>
-                            <li>Portfolio rebuild reflects organic brutalism DNA.</li>
+                            <li><strong>SPLITT App (v21)</strong> - https://theairavi-del.github.io/splitt-app/ - OCR bill splitting with Supabase sync</li>
+                            <li><strong>Portfolio</strong> - https://nicomaggioli.com/ - Pinterest-style with projects</li>
+                            <li><strong>Briefing Dashboard</strong> - https://theairavi-del.github.io/briefing-dashboard/ - This site</li>
+                            <li><strong>Research Dashboard</strong> - https://theairavi-del.github.io/vector-research-dashboard/ - 1-star review analysis</li>
                         </ul>
                     </div>
+                    <div class="content-section">
+                        <h4>🎨 ACTIVE PROJECTS</h4>
+                        <ul>
+                            <li><strong>VECTRA-FORGE</strong> - Sketch-to-3D topology tool (in development)</li>
+                            <li><strong>RAVI-SEED</strong> - Pre-built brand kits concept ($299 one-time)</li>
+                            <li><strong>VOID & AETHER</strong> - Longevity drink dual-brand concept</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h4>📊 AUTOMATION STATUS</h4>
+                        <ul>
+                            <li><strong>Cron Jobs Active:</strong> Research updates every 3 hours</li>
+                            <li><strong>Bug Checks:</strong> Every 30 minutes for SPLITT</li>
+                            <li><strong>Daily Briefing:</strong> 9 AM EST every day</li>
+                        </ul>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Next Milestone</span>
+                        <span class="data-point-value">$1,000,000 in a single week (The North Star Goal)</span>
+                    </div>
                 `,
-                tags: ['Briefing', 'Operations'],
+                tags: ['Status', 'Projects', 'Operations', 'Feb-18'],
                 priority: 'medium'
             }
         ];
@@ -653,7 +689,7 @@
             }
 
             container.innerHTML = filtered.map(item => `
-                <article class="intel-card" id="card-${item.id}" onclick="toggleExpand(${item.id})">
+                <article class="intel-card ${item.priority === 'high' ? 'priority-high' : ''}" id="card-${item.id}" onclick="toggleExpand(${item.id})">
                     <div class="intel-meta">
                         <span class="meta-date">${formatDate(item.date)}</span>
                         <span class="meta-category">${item.category.replace('_', ' ')}</span>
@@ -705,7 +741,7 @@
                         'all': ['All Reports', 'Consolidated entrepreneurial intelligence and strategic research.'],
                         'reddit': ['Reddit Research', 'Pain points and opportunities extracted from Reddit communities.'],
                         'ideas': ['Validated Ideas', 'Business concepts ready for execution.'],
-                        'deepdive': ['Detailed Research', 'Comprehensive market and strategy analysis.'],
+                        'deepdive': ['Deep Dives', 'Comprehensive market and strategy analysis.'],
                         'briefings': ['Daily Briefings', 'Daily strategic updates and operational notes.']
                     };
                     
