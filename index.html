@@ -35,7 +35,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Header */
         .header {
             background: var(--bg-primary);
             border-bottom: 1px solid var(--border);
@@ -103,7 +102,6 @@
             letter-spacing: 1.5px;
         }
 
-        /* Main Layout */
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -113,7 +111,6 @@
             gap: 60px;
         }
 
-        /* Sidebar */
         .sidebar {
             position: sticky;
             top: 120px;
@@ -149,19 +146,16 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--text-tertiary);
-            margin-bottom: 20px;
-            font-weight: 700;
+            margin-bottom: 16px;
         }
 
         .nav-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             padding: 12px 0;
-            cursor: pointer;
             color: var(--text-secondary);
-            font-size: 14px;
-            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid transparent;
             transition: all 0.2s;
         }
@@ -181,7 +175,6 @@
             opacity: 0.5;
         }
 
-        /* Content Area */
         .content-header {
             margin-bottom: 50px;
             border-bottom: 1px solid var(--border);
@@ -200,7 +193,6 @@
             font-size: 15px;
         }
 
-        /* Intelligence Feed */
         .intel-list {
             display: flex;
             flex-direction: column;
@@ -276,86 +268,80 @@
             display: block;
         }
 
-        /* Content Styling */
         .content-section {
             margin-bottom: 30px;
         }
 
         .content-section h4 {
             font-size: 14px;
+            color: var(--accent);
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--accent);
-            margin-bottom: 15px;
         }
 
         .content-section p {
             color: var(--text-secondary);
-            margin-bottom: 15px;
-            font-size: 15px;
+            margin-bottom: 16px;
+            line-height: 1.7;
         }
 
         .content-section ul {
-            padding-left: 20px;
-            margin-bottom: 15px;
+            list-style: none;
+            padding: 0;
         }
 
         .content-section li {
             color: var(--text-secondary);
-            margin-bottom: 8px;
-            font-size: 15px;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
         }
 
-        .content-section strong {
-            color: var(--text-primary);
+        .content-section li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
         }
 
-        .data-point {
-            background: var(--bg-primary);
-            border-left: 2px solid var(--accent);
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .data-point-label {
-            font-size: 10px;
-            text-transform: uppercase;
-            color: var(--text-tertiary);
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .data-point-value {
-            font-size: 14px;
-            color: var(--text-primary);
-        }
-
-        /* Tags */
         .tag-list {
             display: flex;
             gap: 10px;
-            margin-top: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
 
         .tag {
-            font-size: 10px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+        }
+
+        .data-point {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--bg-tertiary);
+            border-left: 3px solid var(--accent);
+            margin-top: 20px;
+        }
+
+        .data-point-label {
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-tertiary);
-            border: 1px solid var(--border);
-            padding: 4px 10px;
-            border-radius: 2px;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                position: static;
-            }
+        .data-point-value {
+            font-weight: 600;
+            color: var(--text-primary);
         }
     </style>
 </head>
@@ -363,58 +349,62 @@
     <header class="header">
         <div class="header-content">
             <div class="brand">
-                <div class="brand-logo">V.01</div>
+                <div class="brand-logo">VECTOR</div>
                 <div class="brand-text">
-                    <h1>Entrepreneur Hub</h1>
+                    <h1>Entrepreneurial Hub</h1>
                 </div>
             </div>
-            <div class="header-nav">
+            <nav class="header-nav">
                 <div class="nav-stat">
-                    <span class="nav-stat-value" id="totalCount">0</span>
+                    <span class="nav-stat-value" id="totalCount">8</span>
                     <span class="nav-stat-label">Total Reports</span>
                 </div>
                 <div class="nav-stat">
-                    <span class="nav-stat-value" id="activeIdeas">0</span>
+                    <span class="nav-stat-value" id="activeIdeas">3</span>
                     <span class="nav-stat-label">Active Ideas</span>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
     <div class="container">
         <aside class="sidebar">
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search knowledge base...">
+                <input type="text" id="searchInput" placeholder="Search intelligence...">
             </div>
 
             <nav class="nav-group">
-                <h3>Intelligence Feed</h3>
+                <h3>Categories</h3>
                 <div class="nav-item active" data-filter="all">
                     <span>All Reports</span>
-                    <span class="nav-count" id="count-all">0</span>
+                    <span class="nav-count" id="count-all">8</span>
                 </div>
                 <div class="nav-item" data-filter="reddit">
                     <span>Reddit Research</span>
-                    <span class="nav-count" id="count-reddit">0</span>
+                    <span class="nav-count" id="count-reddit">2</span>
                 </div>
                 <div class="nav-item" data-filter="ideas">
                     <span>Validated Ideas</span>
-                    <span class="nav-count" id="count-ideas">0</span>
+                    <span class="nav-count" id="count-ideas">3</span>
                 </div>
                 <div class="nav-item" data-filter="deepdive">
                     <span>Detailed Research</span>
-                    <span class="nav-count" id="count-deepdive">0</span>
+                    <span class="nav-count" id="count-deepdive">2</span>
                 </div>
                 <div class="nav-item" data-filter="briefings">
                     <span>Daily Briefings</span>
-                    <span class="nav-count" id="count-briefings">0</span>
+                    <span class="nav-count" id="count-briefings">2</span>
                 </div>
             </nav>
 
             <nav class="nav-group">
                 <h3>Priority Tags</h3>
                 <div id="tagCloud" class="tag-list" style="flex-wrap: wrap;">
-                    <!-- Tags added here -->
+                    <span class="tag">SaaS</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">Research</span>
+                    <span class="tag">Trends</span>
+                    <span class="tag">Deployed</span>
                 </div>
             </nav>
         </aside>
@@ -425,9 +415,7 @@
                 <p id="currentCategoryDesc">Consolidated entrepreneurial intelligence and strategic research.</p>
             </div>
 
-            <div class="intel-list" id="intelList">
-                <!-- Content loaded here -->
-            </div>
+            <div class="intel-list" id="intelList"></div>
         </main>
     </div>
 
@@ -435,6 +423,120 @@
         const intelData = [
             {
                 id: 1,
+                date: '2026-02-18',
+                category: 'briefings',
+                title: 'Daily Briefing: 02.18.2026',
+                preview: 'Design trends, 1-star review opportunities, and the "Vibe Code Rescue" market...',
+                content: `
+                    <div class="content-section">
+                        <h4>Design Trends</h4>
+                        <ul>
+                            <li><strong>Liquid Metal & Chrome Type</strong> - 2000s Y2K refined. Iridescent gradients, silver typography.</li>
+                            <li><strong>Anti-Design Organized Chaos</strong> - Intentionally broken grids, curated chaos like MSCHF.</li>
+                            <li><strong>Bio-Organic Interfaces</strong> - Living UI elements, pulsing borders, cellular textures.</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h4>Top 1-Star Review Pain Points</h4>
+                        <ul>
+                            <li><strong>Subscription Cancellation Hell</strong> (Pain Score: 9.4) - Adobe, gyms, meal kits</li>
+                            <li><strong>Airline Customer Service</strong> (Pain Score: 9.1) - Hours on hold, no rebooking</li>
+                            <li><strong>Telecom Billing</strong> (Pain Score: 8.9) - Promo rates expire silently</li>
+                            <li><strong>Landlord Deposit Theft</strong> (Pain Score: 8.9) - Illegal withholdings</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h4>Key Opportunities</h4>
+                        <ul>
+                            <li><strong>Cancellation-as-a-Service</strong> - Browser extension + AI phone agent. $5/mo or $29/cancel.</li>
+                            <li><strong>Vibe Code Rescue</strong> - $50/incident debugging for AI-generated code.</li>
+                            <li><strong>YouTube SEO Tool for B2B SaaS</strong> - 100-view videos generating $12K/mo from search.</li>
+                        </ul>
+                    </div>
+                `,
+                tags: ['Briefing', 'Trends', 'Opportunities'],
+                priority: 'high'
+            },
+            {
+                id: 2,
+                date: '2026-02-18',
+                category: 'ideas',
+                title: 'SPLITT: Bill Splitting App (DEPLOYED)',
+                preview: 'Built and deployed v18 with OCR receipt scanning, Supabase backend, and real-time collaboration...',
+                content: `
+                    <div class="content-section">
+                        <h4>Features</h4>
+                        <ul>
+                            <li><strong>OCR Receipt Scanning</strong> - Tesseract.js extracts items, prices, tax, tip automatically.</li>
+                            <li><strong>Cross-Device Sync</strong> - Supabase backend for real-time room collaboration.</li>
+                            <li><strong>No Accounts Required</strong> - 6-digit room codes, works instantly.</li>
+                            <li><strong>Smart Splitting</strong> - Claim items solo or split, orphan detection, math validation.</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h4>Live URL</h4>
+                        <p>https://theairavi-del.github.io/splitt-app/</p>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Status</span>
+                        <span class="data-point-value">v18 LIVE - All bugs fixed, Supabase connected</span>
+                    </div>
+                `,
+                tags: ['Product', 'Deployed', 'SaaS'],
+                priority: 'high'
+            },
+            {
+                id: 3,
+                date: '2026-02-17',
+                category: 'deepdive',
+                title: 'Deep Dive: AI ROI Dashboard Opportunity',
+                preview: 'CEOs admitting AI has "zero impact on productivity" despite massive spend. 524 upvotes on HN...',
+                content: `
+                    <div class="content-section">
+                        <h4>The Problem</h4>
+                        <p>CEOs admitting AI has "zero impact on productivity" despite massive spend. 524 upvotes, 424 comments on Hacker News.</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>The Solution</h4>
+                        <p>Tool that integrates with Slack/GitHub/Notion to measure actual AI productivity gains. Real ROI tracking.</p>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Market</span>
+                        <span class="data-point-value">Every company using AI tools with no measurement</span>
+                    </div>
+                `,
+                tags: ['AI', 'SaaS', 'Enterprise'],
+                priority: 'high'
+            },
+            {
+                id: 4,
+                date: '2026-02-17',
+                category: 'reddit',
+                title: 'Reddit Analysis: YouTube as Search Engine',
+                preview: 'Proven: 100-200 view videos generating $12K/month. 63% views from search, 26% from Google...',
+                content: `
+                    <div class="content-section">
+                        <h4>Key Insight</h4>
+                        <p>r/SaaS founder: 100-200 view videos generating $12K/month through search alone.</p>
+                    </div>
+                    <div class="content-section">
+                        <h4>Method</h4>
+                        <ul>
+                            <li>"Harvest customer pain → tutorials → search assets"</li>
+                            <li>63% views from YouTube search</li>
+                            <li>26% from Google directly</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h4>Opportunity</h4>
+                        <p>YouTube SEO tool for B2B SaaS targeting low-competition tutorial keywords. Most founders miss this entirely.</p>
+                    </div>
+                `,
+                tags: ['YouTube', 'SEO', 'Content'],
+                priority: 'medium'
+            },
+            {
+                id: 5,
                 date: '2026-02-15',
                 category: 'reddit',
                 title: 'Reddit Pain Point Analysis: Adobe Workflow Gaps',
@@ -461,7 +563,7 @@
                 priority: 'high'
             },
             {
-                id: 2,
+                id: 6,
                 date: '2026-02-15',
                 category: 'ideas',
                 title: 'Concept: Vector-Forge (Automatic 3D Topology)',
@@ -484,7 +586,7 @@
                 priority: 'medium'
             },
             {
-                id: 3,
+                id: 7,
                 date: '2026-02-14',
                 category: 'deepdive',
                 title: 'Deep Dive: The Economics of Niche Digital Asset Marketplaces',
@@ -496,14 +598,14 @@
                     </div>
                     <div class="content-section">
                         <h4>Strategic Edge</h4>
-                        <p>Focusing on \"Organic Brutalism\" assets creates a unique monopoly in a crowded marketplace.</p>
+                        <p>Focusing on "Organic Brutalism" assets creates a unique monopoly in a crowded marketplace.</p>
                     </div>
                 `,
                 tags: ['Etsy', 'Finance', 'Strategy'],
                 priority: 'high'
             },
             {
-                id: 4,
+                id: 8,
                 date: '2026-02-14',
                 category: 'briefings',
                 title: 'Daily Briefing: 02.14.2026',
@@ -570,16 +672,7 @@
 
         function toggleExpand(id) {
             const card = document.getElementById(`card-${id}`);
-            const isExpanded = card.classList.contains('expanded');
-            
-            // Close others if you want accordion behavior
-            // document.querySelectorAll('.intel-card').forEach(c => c.classList.remove('expanded'));
-            
-            if (!isExpanded) {
-                card.classList.add('expanded');
-            } else {
-                card.classList.remove('expanded');
-            }
+            card.classList.toggle('expanded');
         }
 
         function formatDate(dateStr) {
@@ -599,10 +692,6 @@
             document.getElementById('count-ideas').textContent = ideas;
             document.getElementById('count-deepdive').textContent = intelData.filter(i => i.category === 'deepdive').length;
             document.getElementById('count-briefings').textContent = intelData.filter(i => i.category === 'briefings').length;
-
-            // Generate Tags
-            const allTags = [...new Set(intelData.flatMap(i => i.tags))];
-            document.getElementById('tagCloud').innerHTML = allTags.map(t => `<span class="tag">${t}</span>`).join('');
         }
 
         function setupListeners() {
@@ -613,13 +702,16 @@
                     currentCategory = item.dataset.filter;
                     
                     const titles = {
-                        all: 'All Reports',
-                        reddit: 'Reddit Research',
-                        ideas: 'Validated Ideas',
-                        deepdive: 'Detailed Research',
-                        briefings: 'Daily Briefings'
+                        'all': ['All Reports', 'Consolidated entrepreneurial intelligence and strategic research.'],
+                        'reddit': ['Reddit Research', 'Pain points and opportunities extracted from Reddit communities.'],
+                        'ideas': ['Validated Ideas', 'Business concepts ready for execution.'],
+                        'deepdive': ['Detailed Research', 'Comprehensive market and strategy analysis.'],
+                        'briefings': ['Daily Briefings', 'Daily strategic updates and operational notes.']
                     };
-                    document.getElementById('currentCategoryTitle').textContent = titles[currentCategory];
+                    
+                    document.getElementById('currentCategoryTitle').textContent = titles[currentCategory][0];
+                    document.getElementById('currentCategoryDesc').textContent = titles[currentCategory][1];
+                    
                     renderIntel();
                 });
             });
@@ -630,7 +722,7 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', init);
+        init();
     </script>
 </body>
 </html>
