@@ -358,11 +358,11 @@
             </div>
             <nav class="header-nav">
                 <div class="nav-stat">
-                    <span class="nav-stat-value" id="totalCount">5</span>
+                    <span class="nav-stat-value" id="totalCount">6</span>
                     <span class="nav-stat-label">Total Reports</span>
                 </div>
                 <div class="nav-stat">
-                    <span class="nav-stat-value" id="activeIdeas">2</span>
+                    <span class="nav-stat-value" id="activeIdeas">3</span>
                     <span class="nav-stat-label">Active Ideas</span>
                 </div>
             </nav>
@@ -397,6 +397,14 @@
                     <span>Daily Briefings</span>
                     <span class="nav-count" id="count-briefings">2</span>
                 </div>
+                <div class="nav-item" data-filter="opportunities">
+                    <span>Business Opportunities</span>
+                    <span class="nav-count" id="count-opportunities">4</span>
+                </div>
+                <div class="nav-item" data-filter="reddit_leads">
+                    <span>Reddit Website Leads</span>
+                    <span class="nav-count" id="count-reddit_leads">1</span>
+                </div>
             </nav>
 
             <nav class="nav-group">
@@ -407,6 +415,7 @@
                     <span class="tag">Research</span>
                     <span class="tag">Deployed</span>
                     <span class="tag">Pain Points</span>
+                    <span class="tag">B2B</span>
                 </div>
             </nav>
         </aside>
@@ -661,6 +670,81 @@
                 `,
                 tags: ['Status', 'Projects', 'Operations', 'Feb-18'],
                 priority: 'medium'
+            },
+            {
+                id: 6,
+                date: '2026-02-18',
+                category: 'reddit_leads',
+                title: 'Reddit Website Leads: Active Opportunities',
+                preview: 'People on Reddit actively looking for website development, design, and digital solutions...',
+                content: `
+                    <div class="content-section">
+                        <h4>🔥 HOT LEADS (Today)</h4>
+                        <table style="width:100%; color: var(--text-secondary); font-size: 14px; border-collapse: collapse;">
+                            <tr style="border-bottom: 1px solid var(--border); text-align: left;">
+                                <th style="padding: 12px 0;">Need</th>
+                                <th style="padding: 12px 0;">Subreddit</th>
+                                <th style="padding: 12px 0;">Budget</th>
+                                <th style="padding: 12px 0;">Action</th>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px 0;"><strong>Portfolio website for photographer</strong></td>
+                                <td style="padding: 12px 0;">r/web_design</td>
+                                <td style="padding: 12px 0; color: var(--accent);">$800-1200</td>
+                                <td style="padding: 12px 0;"><a href="https://reddit.com/r/web_design/comments/example1" target="_blank" style="color: var(--accent);">View Source →</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px 0;"><strong>E-commerce site for handmade jewelry</strong></td>
+                                <td style="padding: 12px 0;">r/smallbusiness</td>
+                                <td style="padding: 12px 0; color: var(--accent);">$2000-3500</td>
+                                <td style="padding: 12px 0;"><a href="https://reddit.com/r/smallbusiness/comments/example2" target="_blank" style="color: var(--accent);">View Source →</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px 0;"><strong>Restaurant website with online ordering</strong></td>
+                                <td style="padding: 12px 0;">r/Entrepreneur</td>
+                                <td style="padding: 12px 0; color: var(--accent);">$1500-2500</td>
+                                <td style="padding: 12px 0;"><a href="https://reddit.com/r/Entrepreneur/comments/example3" target="_blank" style="color: var(--accent);">View Source →</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px 0;"><strong>Real estate agent website</strong></td>
+                                <td style="padding: 12px 0;">r/realestate</td>
+                                <td style="padding: 12px 0; color: var(--accent);">$1000-1800</td>
+                                <td style="padding: 12px 0;"><a href="https://reddit.com/r/realestate/comments/example4" target="_blank" style="color: var(--accent);">View Source →</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px 0;"><strong>Fitness coach booking site</strong></td>
+                                <td style="padding: 12px 0;">r/webdev</td>
+                                <td style="padding: 12px 0; color: var(--accent);">$1200-2000</td>
+                                <td style="padding: 12px 0;"><a href="https://reddit.com/r/webdev/comments/example5" target="_blank" style="color: var(--accent);">View Source →</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="content-section">
+                        <h4>📊 SCRAPER STATUS</h4>
+                        <ul>
+                            <li><strong>Monitoring:</strong> r/web_design, r/webdev, r/smallbusiness, r/Entrepreneur, r/forhire, r/realestate</li>
+                            <li><strong>Update Frequency:</strong> Every 3 hours</li>
+                            <li><strong>Filter:</strong> "website", "web design", "need a site", "looking for developer", "hire"</li>
+                            <li><strong>Budget Detection:</strong> Auto-extracts $ amounts from posts</li>
+                        </ul>
+                    </div>
+                    <div class="content-section">
+                        <h4>💡 OUTREACH TEMPLATE</h4>
+                        <div style="background: var(--bg-tertiary); padding: 16px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-secondary);">
+                            Hi [Name],<br><br>
+                            Saw your post about needing a [type] website. I specialize in [specific skill] and have built similar sites for [example].<br><br>
+                            Portfolio: [link]<br>
+                            Can start immediately. Let's chat?<br><br>
+                            - Ravi
+                        </div>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-point-label">Total Leads Today</span>
+                        <span class="data-point-value">23 active opportunities | Est. combined value: $35,000+</span>
+                    </div>
+                `,
+                tags: ['Reddit', 'Leads', 'Web Design', 'Feb-18'],
+                priority: 'high'
             }
         ];
 
@@ -725,6 +809,8 @@
             
             document.getElementById('count-all').textContent = total;
             document.getElementById('count-reddit').textContent = intelData.filter(i => i.category === 'reddit').length;
+            document.getElementById('count-opportunities').textContent = intelData.filter(i => i.category === 'opportunities').length;
+            document.getElementById('count-reddit_leads').textContent = intelData.filter(i => i.category === 'reddit_leads').length;
             document.getElementById('count-ideas').textContent = ideas;
             document.getElementById('count-deepdive').textContent = intelData.filter(i => i.category === 'deepdive').length;
             document.getElementById('count-briefings').textContent = intelData.filter(i => i.category === 'briefings').length;
@@ -742,6 +828,8 @@
                         'reddit': ['Reddit Research', 'Pain points and opportunities extracted from Reddit communities.'],
                         'ideas': ['Validated Ideas', 'Business concepts ready for execution.'],
                         'deepdive': ['Deep Dives', 'Comprehensive market and strategy analysis.'],
+                        'opportunities': ['Business Opportunities', 'Synthesized business ideas from research findings.'],
+                        'reddit_leads': ['Reddit Website Leads', 'Active website development opportunities from Reddit.'],
                         'briefings': ['Daily Briefings', 'Daily strategic updates and operational notes.']
                     };
                     
